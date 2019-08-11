@@ -1,0 +1,21 @@
+title 2BN-Chris | UoH-FSO19 | Part0.6
+
+note over browser:
+Browser sends note form data to server
+as a JSON payload using POST method
+end note
+
+browser ->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over server:
+Server stores data and responds
+with Status 201 'Created'
+end note
+
+server -->browser: HTTP Status 201
+
+note over browser:
+Browser redraws page to show new
+note without a redirect that would
+have reloaded page
+end note
