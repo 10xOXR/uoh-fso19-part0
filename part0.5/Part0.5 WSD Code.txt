@@ -1,25 +1,11 @@
-title 2BN-Chris | UoH-FSO19 | Part0.4
+title 2BN-Chris | UoH-FSO19 | Part0.5
+
 
 note over browser:
-Browser sends form data to server
-using POST method
+Browser requests '/spa' page
 end note
 
-browser ->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
-
-note over server:
-Server stores data and requests
-browser perform a new GET request
-from '/notes'
-end note
-
-server -->browser: HTTP URL Redirect '/notes'
-
-note over browser:
-Browser requests '/notes' page
-end note
-
-browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
 
 note over server:
 Server sends HTML to browser
@@ -45,13 +31,13 @@ Browser reads HTML and requests
 JavaScript file referenced in <head>
 end note
 
-browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
 
 note over server:
-Server sends CSS file to browser
+Server sends JS file to browser
 end note
 
-server-->browser: main.js
+server-->browser: spa.js
 
 note over browser:
 Browser starts executing JavaScript
